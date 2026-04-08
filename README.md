@@ -162,6 +162,23 @@ A clean first milestone would be:
 4. one graph-ready multi-station representation
 5. experiment configuration and reproducibility
 
+## SeisBench exploration
+
+For first-pass data familiarization, notebooking is reasonable here as long as notebooks
+stay exploratory and reusable logic moves back into `src/`.
+
+The repository now includes:
+- `docs/SEISBENCH_PLAYGROUND.md` for a quick guide
+- `notebooks/seisbench_demo.ipynb` for a first interactive walkthrough
+- `src/seismo_nn/seisbench.py` for thin helper utilities that keep cache paths and
+  schema conversion explicit
+
+Launch the demo with:
+
+```bash
+make notebook
+```
+
 The strongest first applied target is usually either:
 - phase picking
 - event detection

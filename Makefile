@@ -1,4 +1,4 @@
-.PHONY: sync lint format typecheck test check clean
+.PHONY: sync lint format typecheck test check notebook clean
 
 sync:
 	uv sync
@@ -20,6 +20,9 @@ check:
 	uv run ruff format --check .
 	uv run mypy src tests
 	uv run pytest
+
+notebook:
+	uv run jupyter lab
 
 clean:
 	rm -rf .mypy_cache .pytest_cache .ruff_cache htmlcov .coverage dist build

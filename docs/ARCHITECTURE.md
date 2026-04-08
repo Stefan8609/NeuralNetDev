@@ -45,6 +45,12 @@ Defines data-facing schemas for waveform windows, stations, picks, graph example
 preprocessing configuration. Raw IO adapters can depend on external packages later, but
 the shared types should stay stable here.
 
+### `seisbench.py`
+
+Defines lightweight exploration helpers for SeisBench so notebook setup, local cache
+paths, and schema bridging stay explicit and reusable without turning notebooks into
+core infrastructure.
+
 ### `models.py`
 
 Defines model interfaces and configuration objects across waveform, graph, and geometric

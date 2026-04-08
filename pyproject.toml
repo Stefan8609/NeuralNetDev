@@ -90,6 +90,10 @@ pretty = true
 show_error_codes = true
 mypy_path = "src"
 
+[[tool.mypy.overrides]]
+module = ["pandas", "seisbench", "seisbench.*"]
+ignore_missing_imports = true
+
 [dependency-groups]
 dev = [
   "ipykernel>=7.2.0",

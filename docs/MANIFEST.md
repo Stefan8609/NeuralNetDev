@@ -10,6 +10,7 @@ Read here before making structural changes.
 - `DEVELOPMENT.md`: branch, commit, and repository working norms.
 - `ARCHITECTURE.md`: package boundaries and intended waveform, graph, and geometric workflow.
 - `ROADMAP.md`: milestone plan from scaffold to baseline waveform models, graph baselines, and geometric models.
+- `SEISBENCH_PLAYGROUND.md`: practical first steps for exploring SeisBench datasets.
 
 ## Editing guidance
 

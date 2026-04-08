@@ -17,6 +17,9 @@ venv/
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
+.cache/
+.mplconfig/
+.seisbench-cache/
 .coverage
 htmlcov/
 

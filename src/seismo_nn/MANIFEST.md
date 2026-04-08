@@ -15,6 +15,7 @@ lock-in, with explicit room for waveform, graph, and geometric modeling.
 - `models.py`: model interface and configuration contracts.
 - `training.py`: training configuration and run summaries.
 - `evaluation.py`: evaluation summaries and metric records.
+- `seisbench.py`: lightweight helpers for SeisBench exploration and schema bridging.
 
 ## How to extend
 

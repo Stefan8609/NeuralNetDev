@@ -12,6 +12,7 @@ logic, configuration, and project guidance.
 - `README.md`: project overview, environment setup, and common commands.
 - `AGENTS.md`: contributor guidance for Codex and other agents.
 - `docs/`: architecture, roadmap, and development policy.
+- `notebooks/`: exploratory analysis notebooks that should stay thin and reproducible.
 - `configs/`: experiment and workflow configuration files.
 - `src/seismo_nn/`: package source for reusable library code.
 - `tests/`: validation and regression coverage.
@@ -31,6 +32,7 @@ What is intentionally still lightweight:
 - concrete model implementations
 - train/eval entrypoints
 - graph construction utilities
+- exploratory notebooks for data familiarization
 
 ## Target problem areas
 
