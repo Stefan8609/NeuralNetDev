@@ -1,14 +1,20 @@
 # seismo-nn
 
-A clean, maintainable Python scaffold for seismology neural network development.
+A clean, maintainable scaffold for seismology neural network development.
 
-This template is designed for:
+The repository now includes both developer tooling and domain-aware architecture for:
+- seismic task definitions
+- waveform window and preprocessing schemas
+- model, training, and evaluation contracts
+- manifest files that help Codex and human contributors navigate quickly
+
+This project is designed for:
 - isolated environments via `uv`
 - reproducible dependency management
 - `src/` layout for cleaner imports and packaging
 - automated linting, formatting, type checking, and tests
 - Git hooks with `pre-commit`
-- GitHub Actions continuous integration
+- clear architecture before framework-heavy model implementation
 
 ## Project layout
 
@@ -18,13 +24,26 @@ seismo-nn/
 │   └── workflows/
 │       └── ci.yml
 ├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── DEVELOPMENT.md
+│   ├── MANIFEST.md
+│   └── ROADMAP.md
 ├── scripts/
 ├── src/
 │   └── seismo_nn/
 │       ├── __init__.py
 │       └── config.py
+│       ├── evaluation.py
+│       ├── MANIFEST.md
+│       ├── models.py
+│       ├── pipeline.py
+│       ├── tasks.py
+│       └── training.py
 ├── tests/
+│   ├── MANIFEST.md
 │   └── test_import.py
+├── AGENTS.md
+├── MANIFEST.md
 ├── .editorconfig
 ├── .gitignore
 ├── .pre-commit-config.yaml
@@ -107,6 +126,14 @@ uv lock
 uv sync
 ```
 
+## Navigation
+
+Start here when orienting to the project:
+- `MANIFEST.md`
+- `AGENTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/ROADMAP.md`
+
 ## Suggested next dependencies for your use case
 
 Depending on your first milestone, you may want to add some of these later:
@@ -130,6 +157,12 @@ A clean first milestone would be:
 3. baseline model training
 4. evaluation metrics
 5. experiment configuration and reproducibility
+
+The strongest first applied target is usually either:
+- phase picking
+- event detection
+
+Both are now represented in the package task definitions and architecture docs.
 
 ## Naming notes
 
