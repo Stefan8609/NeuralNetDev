@@ -1,19 +1,20 @@
 # seismo-nn
 
-A clean, maintainable scaffold for seismology neural network development.
+A maintainable research scaffold for seismology machine learning that can grow from
+simple waveform baselines to graph neural networks and geometric deep learning methods.
 
-The repository now includes both developer tooling and domain-aware architecture for:
-- seismic task definitions
-- waveform window and preprocessing schemas
-- model, training, and evaluation contracts
-- manifest files that help Codex and human contributors navigate quickly
+The repository includes:
+- explicit task definitions for waveform, graph, and geometry-aware problems
+- typed schemas for waveform windows, stations, picks, and graph examples
+- lightweight model, training, and evaluation contracts
+- manifest files that help human contributors and coding agents navigate quickly
 
 This project is designed for:
-- isolated environments via `uv`
+- Python 3.11 and `uv`
 - reproducible dependency management
-- `src/` layout for cleaner imports and packaging
-- automated linting, formatting, type checking, and tests
-- Git hooks with `pre-commit`
+- `src/` layout for reusable package code
+- `configs/` for experiment-facing configuration
+- `ruff`, `pytest`, and `pre-commit`
 - clear architecture before framework-heavy model implementation
 
 ## Project layout
@@ -28,6 +29,8 @@ seismo-nn/
 │   ├── DEVELOPMENT.md
 │   ├── MANIFEST.md
 │   └── ROADMAP.md
+├── configs/
+│   └── MANIFEST.md
 ├── scripts/
 ├── src/
 │   └── seismo_nn/
@@ -95,7 +98,6 @@ uv run pre-commit install --hook-type pre-push
 ```bash
 uv run ruff check .
 uv run ruff format .
-uv run mypy src tests
 uv run pytest
 ```
 
@@ -134,35 +136,38 @@ Start here when orienting to the project:
 - `docs/ARCHITECTURE.md`
 - `docs/ROADMAP.md`
 
-## Suggested next dependencies for your use case
+## Scientific direction
 
-Depending on your first milestone, you may want to add some of these later:
-- `obspy`
-- `pandas`
-- `matplotlib`
-- `scipy`
-- `torch`
-- `lightning`
-- `seisbench`
-- `jupyterlab`
-- `hydra-core` or `pydantic-settings`
+The scaffold is meant to support:
+- phase picking
+- denoising
+- event detection and association
+- earthquake locating
+- travel-time consistency modeling
+- multi-station waveform interpretation
 
-I would add these only when the workflow truly needs them.
+When proposing or implementing a method, keep these scientific questions explicit:
+- what are the nodes
+- what are the edges
+- which features encode waveform, timing, and geometry
+- what are the targets and losses
+- which physical constraints or uncertainties matter
 
 ## First development targets
 
 A clean first milestone would be:
 1. dataset ingestion
 2. preprocessing and windowing
-3. baseline model training
-4. evaluation metrics
+3. one simple waveform baseline
+4. one graph-ready multi-station representation
 5. experiment configuration and reproducibility
 
 The strongest first applied target is usually either:
 - phase picking
 - event detection
 
-Both are now represented in the package task definitions and architecture docs.
+Both are represented in the package task definitions, with graph/geometric follow-ons
+documented for later milestones.
 
 ## Naming notes
 

@@ -14,6 +14,7 @@ class MetricRecord:
     name: str
     value: float
     units: str | None = None
+    uncertainty: float | None = None
 
 
 @dataclass(frozen=True, slots=True)

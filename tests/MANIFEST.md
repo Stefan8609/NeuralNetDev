@@ -13,5 +13,6 @@ Tests should move with the architecture from smoke coverage to domain behavior c
 
 - waveform window validation
 - task schema invariants
+- graph example validation
 - training configuration validation
 - evaluation summary construction

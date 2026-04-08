@@ -7,7 +7,7 @@ name = "seismo-nn"
 version = "0.1.0"
 description = "Seismology neural network development scaffold."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
   { name = "Stefan Kildal-Brandt" },
@@ -44,7 +44,7 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py312"
+target-version = "py311"
 src = ["src", "tests"]
 exclude = [
   ".git",
@@ -82,7 +82,7 @@ indent-style = "space"
 line-ending = "lf"
 
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.11"
 files = ["src", "tests"]
 strict = true
 warn_unused_configs = true

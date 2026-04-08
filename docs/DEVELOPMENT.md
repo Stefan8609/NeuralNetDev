@@ -23,7 +23,16 @@ Keep these concerns separate early:
 - raw data access
 - preprocessing
 - model definition
+- graph construction
+- geometry handling
 - training loop
 - evaluation
 - experiment configs
 - notebooks only for exploration, not core logic
+
+## Scientific implementation guidance
+
+- Prefer the simplest correct baseline before introducing message passing or equivariance.
+- Make node, edge, feature, target, and loss semantics explicit in code and docs.
+- Keep travel-time assumptions and uncertainty visible instead of hiding them in helpers.
+- Add dependencies only when they unlock the current milestone.

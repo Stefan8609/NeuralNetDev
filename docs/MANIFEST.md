@@ -8,8 +8,8 @@ Read here before making structural changes.
 ## Files
 
 - `DEVELOPMENT.md`: branch, commit, and repository working norms.
-- `ARCHITECTURE.md`: package boundaries and intended seismic ML workflow.
-- `ROADMAP.md`: milestone plan from scaffold to usable baseline models.
+- `ARCHITECTURE.md`: package boundaries and intended waveform, graph, and geometric workflow.
+- `ROADMAP.md`: milestone plan from scaffold to baseline waveform models, graph baselines, and geometric models.
 
 ## Editing guidance
 
